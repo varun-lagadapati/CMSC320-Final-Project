@@ -33,3 +33,45 @@
 <link as="fetch" crossorigin="anonymous" data-no-header="" href="//cdn.cookielaw.org/consent/099cf09d-47b1-46c4-89e9-9f2cce394562/099cf09d-47b1-46c4-89e9-9f2cce394562.json" pr="1" rel="preload" type="application/x-javascript"/>
 <link as="script" data-no-header="" href="https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location" rel="preload" type="text/javascript"/>
 <script async="" charset="UTF-8" data-domain-script="099cf09d-47b1-46c4-89e9-9f2cce394562" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript">
+  </script>
+<script type="application/javascript">
+    
+    (function(a){
+        var w=window,b='cbsoptanon',q='cmd',r='config';
+        w[b] = w[b] ? w[b] : {};
+        w[b][q] = w[b][q] ? w[b][q] : [];
+        w[b][r] = w[b][r] ? w[b][r] : [];
+
+        a.forEach(function(z){
+            w[b][z] = w[b][z] || function(){
+                var c=arguments;
+                w[b][q].push(function(){
+                    w[b][z].apply(w[b],c);
+                })
+            }
+        });
+    })(["onIframesReady","onFormsReady","onScriptsReady","onAdsReady"]);
+
+    //Add configs
+    window.cbsoptanon.config.push({
+        setNpaOnConsentChange: true,
+        euMaxAttempts: 25,
+        countryCodeMaxAttempts: 25,
+        oneTrustTimeout: 2000,
+        enableServices: false
+    });
+
+    //Load iframes as soon as ready
+    window.cbsoptanon.onIframesReady(function(_cbsoptanon) {
+        console.log('Loading iframes');
+        _cbsoptanon.tags.load("IFRAME");
+    });
+
+    window.MetaC = window.MetaC || {};
+    MetaC.scriptExecuted = {};
+
+    function gdprConsentCallback(id, callback, callbackArgs, category, onReady) {
+        onReady = onReady || 'Scripts';
+        var opt = window.cbsoptanon['on'+onReady+'Ready'];
+        MetaC.scriptExecuted[id] = false;
+
