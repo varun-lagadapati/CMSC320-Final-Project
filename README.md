@@ -4,4 +4,4 @@ This repo contains the link to our final project for CMSC320 Spring 2022 (Intro 
 
 The Big Question we wanted to answer was Has the quality of games made by major game companies dropped after 2014? We analyzed user reviews and scores of many different games from three of the largest game companies like Electronic Arts (EA), Ubisoft, and Activision through data scraping, data visualization through Matplotlib, and statistical hypothesis testing. If you are curious to learn more, then check out the link!  
 
-The Jupyter Notebook file represents our final project in progress and the index file represents our final project html default page.
+The Jupyter Notebook file represents our final project mostly done without the last section so this can be accessed through the link and the index file represents our final project html default page.
