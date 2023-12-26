@@ -1,4 +1,4 @@
-Analysis of video games from Electronic Arts (EA), Ubisoft, and Activision
+# Analysis of video games from Electronic Arts (EA), Ubisoft, and Activision
 
 This repo contains the link to our final project for CMSC320 Spring 2022 (Intro to Data Science). I worked on this project with Abdallah Ratib Hwishel and his gitlab link can be accessed here https://gitlab.cs.umd.edu/ahwishel. Our team name is Scientology.
 
